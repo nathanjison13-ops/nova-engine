@@ -16,14 +16,13 @@ Status: early foundation. This repository is not yet a complete engine and does 
 
 ## Current status
 
-Implemented in this starter:
-- C++20 core library and engine lifecycle stub.
+Implemented:
+- C++20 core library and engine lifecycle.
+- Basic logger with severity filtering and a replaceable callback sink.
 - Minimal editor executable.
-- Dependency-free core lifecycle test.
-- CMake build.
-- GitHub Actions build and test workflow definition for Windows, Linux, and macOS.
-- CodeRabbit review configuration.
-- Architecture and feature roadmap.
+- Dependency-free tests for engine lifecycle and logger behavior.
+- CMake build, cross-platform CI workflow definition, and CodeRabbit configuration.
+- Architecture, platform, quality, and feature roadmap.
 
 Planned, not yet implemented:
 - Vulkan renderer, shaders, render graph, materials, lighting, and post-processing.

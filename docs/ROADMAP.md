@@ -5,14 +5,16 @@ A checked box means implemented and tested, not merely planned.
 ## Milestone 0: Repository foundation
 - [x] Public MIT repository.
 - [x] C++20 and CMake project.
-- [x] Core lifecycle stub and smoke test.
-- [x] Windows, Linux, and macOS CI workflow definition.
+- [x] Core lifecycle and basic logger with threshold filtering and callback sink.
+- [x] Core smoke tests.
+- [x] Windows, Linux, and macOS CI workflow file.
 - [x] CodeRabbit configuration.
-- [ ] Verify first CI run on all three operating systems.
+- [ ] Verify remote GitHub Actions registration and first run.
 - [ ] Add formatting and static-analysis checks.
 
 ## Milestone 1: Stable runtime core
-- [ ] Logging, categories, sinks, and structured context.
+- [x] Basic severity filtering and replaceable logging sink.
+- [ ] Structured logging context and configurable output formatting.
 - [ ] Error/result types and development assertions.
 - [ ] Platform abstraction and runtime capability report.
 - [ ] Clock, event system, input abstraction, and job system.

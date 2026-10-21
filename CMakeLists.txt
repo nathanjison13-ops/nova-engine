@@ -8,7 +8,10 @@ project(NovaEngine
 
 option(NOVA_BUILD_TESTS "Build Nova Engine tests" ON)
 
-add_library(nova_core STATIC src/core/engine.cpp)
+add_library(nova_core STATIC
+    src/core/engine.cpp
+    src/core/log.cpp
+)
 add_library(Nova::Core ALIAS nova_core)
 
 target_include_directories(nova_core PUBLIC
