@@ -4,6 +4,15 @@ Nova Engine is an open-source, cross-platform game engine and editor project for
 
 Status: early foundation. This repository is not yet a complete engine and does not claim feature parity with Unreal Engine, Blender, Unity, Godot, or any other tool. The roadmap tracks planned systems and implementation status.
 
+## Try the Grelied browser preview
+
+- [Open Grelied Studio](https://nova-forge-studio-873bjg.v2.appdeploy.ai/)
+- [Grelied release portal](https://grelied-release-portal-4cpjvf.v2.appdeploy.ai/)
+- [Release status and feature matrix](docs/GRELIED_RELEASE_STATUS.md)
+- [Browser and native build instructions](docs/INSTALL_BROWSER_PREVIEW.md)
+
+The browser preview and Nova Engine's native C++ code are separate deliverables. The web app currently provides a small 2D Canvas playtest, scene editing, local browser storage, project JSON import/export, and script text with structural checks. It does not provide native Vulkan rendering, a production compiler, a kernel bridge, or a native mobile package. See the release matrix before describing platform support or native functionality.
+
 ## Principles
 
 - C++20 runtime and CMake build.
@@ -32,7 +41,7 @@ Planned, not yet implemented:
 - Physics, navigation, audio, VFX, scripting, visual scripting, networking, debugging, profiling, and packaging.
 - Android and ARM64 support, including Raspberry Pi-class Linux devices, after the desktop base is validated.
 
-See docs/ROADMAP.md, docs/MODULE_CATALOG.md, and docs/PLATFORM_SUPPORT.md.
+See docs/ROADMAP.md, docs/MODULE_CATALOG.md, docs/PLATFORM_SUPPORT.md, and docs/GRELIED_RELEASE_STATUS.md.
 
 ## Build
 
