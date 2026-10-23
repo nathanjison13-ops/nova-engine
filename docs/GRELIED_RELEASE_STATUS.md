@@ -51,7 +51,7 @@ However, during this review:
 - The workflow-run lookup returned an empty list.
 - The combined status lookup for main commit `5e7eb66295b6fc59521145b8e12b644ea1347c13` returned no status checks.
 
-The cause is not confirmed. Repository Actions settings, workflow registration, or integration permissions need inspection. Do not claim Actions passed until real runner results are available. No Windows or macOS run was verified.
+The repository-level GitHub Actions permissions API reports `enabled: true` and `allowed_actions: all`. The workflow-list API still returns zero, and dispatch still returns 404 despite the file existing in `.github/workflows/ci.yml` on main. The cause remains unresolved. Check the workflow registration/Actions UI and integration API behavior; do not claim Actions passed until real runner results are available. No Windows or macOS run was verified.
 
 ## Feature status
 
