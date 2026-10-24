@@ -9,7 +9,7 @@ A checked box means implemented and tested, not merely planned.
 - [x] Core smoke tests.
 - [x] Windows, Linux, and macOS CI workflow file.
 - [x] CodeRabbit configuration.
-- [ ] Verify remote GitHub Actions registration and first run.
+- [x] Verify remote GitHub Actions registration and first run ([run #1](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40051409293) passed Configure, Build, and Test on Ubuntu, Windows, and macOS on 2026-10-24).
 - [ ] Add formatting and static-analysis checks.
 
 ## Milestone 1: Stable runtime core
