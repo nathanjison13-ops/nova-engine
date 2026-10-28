@@ -2,8 +2,8 @@ BasedOnStyle: LLVM
 Language: Cpp
 IndentWidth: 4
 ContinuationIndentWidth: 4
-ColumnLimit: 80
-AccessModifierOffset: 0
+ColumnLimit: 100
+AccessModifierOffset: -4
 BreakBeforeBraces: Attach
 NamespaceIndentation: None
 IndentCaseLabels: false
@@ -13,6 +13,7 @@ ReferenceAlignment: Left
 AlignAfterOpenBracket: Align
 BinPackArguments: false
 BinPackParameters: false
+PackConstructorInitializers: Never
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLoopsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: Empty
