@@ -21,7 +21,9 @@ Implemented:
 - Basic logger with severity filtering and a replaceable callback sink.
 - Minimal editor executable.
 - Dependency-free tests for engine lifecycle and logger behavior.
-- CMake build, cross-platform CI workflow definition, and CodeRabbit configuration.
+- CMake build and cross-platform build/test CI workflow.
+- Ubuntu CI quality job for clang-format and clang-tidy is configured on this branch, but its first remote result is still pending.
+- CodeRabbit configuration.
 - Architecture, platform, quality, and feature roadmap.
 
 Planned, not yet implemented:

@@ -10,7 +10,7 @@ A checked box means implemented and tested, not merely planned.
 - [x] Windows, Linux, and macOS CI workflow file.
 - [x] CodeRabbit configuration.
 - [x] Verify remote GitHub Actions registration and first run ([run #1](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40051409293) passed Configure, Build, and Test on Ubuntu, Windows, and macOS on 2026-10-24).
-- [ ] Add formatting and static-analysis checks.
+- [ ] Verify clang-format and clang-tidy static-analysis checks in CI. The quality-gates branch adds both checks, but a successful remote run is required before marking this complete.
 
 ## Milestone 1: Stable runtime core
 - [x] Basic severity filtering and replaceable logging sink.
@@ -23,7 +23,7 @@ A checked box means implemented and tested, not merely planned.
 
 ## Milestone 2: Projects, assets, and scenes
 - [ ] Project configuration and schema versioning.
-- [ ] Asset UUIDs, metadata database, dependencies, and import queue.
+- [ ] Asset UUIDs, metadata, dependencies, and import queue.
 - [ ] Scene graph, transforms, ECS, and serialization.
 - [ ] Prefabs, undo/redo, save/load, and crash recovery.
 - [ ] glTF import/export, followed by formats selected through compatibility tests.
