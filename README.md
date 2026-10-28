@@ -22,7 +22,7 @@ Implemented:
 - Minimal editor executable.
 - Dependency-free tests for engine lifecycle and logger behavior.
 - CMake build and cross-platform build/test CI workflow.
-- Ubuntu quality job for clang-format, clang-tidy analyzer checks, and CTest passed in GitHub Actions run #7 on 2026-10-28 on the quality-gates branch. Main remains unchanged pending review.
+- Ubuntu quality job for clang-format, clang-tidy analyzer checks, and CTest passed in GitHub Actions run #9 on 2026-10-28 on branch `qa/quality-gates-release-2026-10-28`. Main remains unchanged pending review.
 - CodeRabbit configuration.
 - Architecture, platform, quality, and feature roadmap.
 

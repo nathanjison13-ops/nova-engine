@@ -10,7 +10,7 @@ A checked box means implemented and tested, not merely planned.
 - [x] Windows, Linux, and macOS CI workflow file.
 - [x] CodeRabbit configuration.
 - [x] Verify remote GitHub Actions registration and first run ([run #1](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40051409293) passed Configure, Build, and Test on Ubuntu, Windows, and macOS on 2026-10-24).
-- [x] Verify clang-format and clang-tidy static-analysis checks in CI ([run #7](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611130182) passed formatting, analyzed build, and CTest on 2026-10-28 on branch `qa/quality-gates-2026-10-28`). Main remains unchanged pending review.
+- [x] Verify clang-format and clang-tidy static-analysis checks in CI ([run #9](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611434064) passed formatting, analyzed build, and CTest on 2026-10-28 on branch `qa/quality-gates-release-2026-10-28`). Main remains unchanged pending review.
 - [ ] Add small sample projects for lifecycle, scene serialization, and later renderer bring-up.
 - [ ] Publish dependency notices and a version/update policy.
 - [ ] Evaluate sanitizers for supported compilers.
