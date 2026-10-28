@@ -2,7 +2,7 @@ name: Build and test
 
 on:
   push:
-    branches: [main]
+    branches: [main, "qa/**"]
   pull_request:
   workflow_dispatch:
 
@@ -26,3 +26,29 @@ jobs:
         run: cmake --build build --config Release
       - name: Test
         run: ctest --test-dir build -C Release --output-on-failure
+
+  quality:
+    name: Formatting and static analysis / Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install quality tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends clang-format clang-tidy
+      - name: Check C++ formatting
+        shell: bash
+        run: |
+          mapfile -t sources < <(git ls-files '*.cpp' '*.hpp' '*.h' '*.cc' '*.cxx')
+          if [[ ${#sources[@]} -eq 0 ]]; then
+            echo 'No tracked C++ source or header files were found.' >&2
+            exit 1
+          fi
+          clang-format --dry-run --Werror "${sources[@]}"
+      - name: Configure static analysis build
+        run: cmake -S . -B build-analysis -DCMAKE_BUILD_TYPE=Release "-DCMAKE_CXX_CLANG_TIDY=clang-tidy;--checks=clang-analyzer-*;--warnings-as-errors=*"
+      - name: Build with static analysis
+        run: cmake --build build-analysis --config Release
+      - name: Test analyzed build
+        run: ctest --test-dir build-analysis -C Release --output-on-failure

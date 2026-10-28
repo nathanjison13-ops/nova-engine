@@ -21,7 +21,9 @@ Implemented:
 - Basic logger with severity filtering and a replaceable callback sink.
 - Minimal editor executable.
 - Dependency-free tests for engine lifecycle and logger behavior.
-- CMake build, cross-platform CI workflow definition, and CodeRabbit configuration.
+- CMake build and cross-platform build/test CI workflow.
+- Ubuntu quality job for clang-format, clang-tidy analyzer checks, and CTest passed in GitHub Actions run #9 on 2026-10-28 on branch `qa/quality-gates-release-2026-10-28`. Main remains unchanged pending review.
+- CodeRabbit configuration.
 - Architecture, platform, quality, and feature roadmap.
 
 Planned, not yet implemented:
@@ -32,7 +34,7 @@ Planned, not yet implemented:
 - Physics, navigation, audio, VFX, scripting, visual scripting, networking, debugging, profiling, and packaging.
 - Android and ARM64 support, including Raspberry Pi-class Linux devices, after the desktop base is validated.
 
-See docs/ROADMAP.md, docs/MODULE_CATALOG.md, and docs/PLATFORM_SUPPORT.md.
+See docs/ROADMAP.md, docs/MODULE_CATALOG.md, docs/PLATFORM_SUPPORT.md, and docs/QUALITY_GATES.md.
 
 ## Build
 
