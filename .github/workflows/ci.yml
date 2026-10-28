@@ -46,24 +46,6 @@ jobs:
             exit 1
           fi
           clang-format --dry-run --Werror "${sources[@]}"
-      - name: Export formatted source preview
-        if: always()
-        shell: bash
-        run: |
-          mapfile -t sources < <(git ls-files '*.cpp' '*.hpp' '*.h' '*.cc' '*.cxx')
-          mkdir -p "$RUNNER_TEMP/clang-formatted"
-          for source in "${sources[@]}"; do
-            mkdir -p "$RUNNER_TEMP/clang-formatted/$(dirname "$source")"
-            clang-format "$source" > "$RUNNER_TEMP/clang-formatted/$source"
-          done
-      - name: Upload formatted source preview
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: clang-formatted-source-preview
-          path: ${{ runner.temp }}/clang-formatted/
-          if-no-files-found: error
-          retention-days: 1
       - name: Configure static analysis build
         run: cmake -S . -B build-analysis -DCMAKE_BUILD_TYPE=Release "-DCMAKE_CXX_CLANG_TIDY=clang-tidy;--checks=clang-analyzer-*;--warnings-as-errors=*"
       - name: Build with static analysis
