@@ -2,6 +2,13 @@
 
 A feature is complete only when code, tests, docs, and supported-platform statements agree.
 
+## Automated CI checks
+
+- The cross-platform matrix configures, builds, and runs CTest on Windows, Linux, and macOS.
+- The Ubuntu quality job checks tracked C++ source and header formatting with `clang-format --dry-run --Werror`.
+- The same job builds with `clang-tidy` analyzer checks enabled and treats analyzer diagnostics as errors, then runs CTest against that analyzed build.
+- Verified on 2026-10-28: GitHub Actions run #7 passed formatting, the clang-tidy analyzed build, and CTest on the quality-gates branch. Main remains unchanged until review and merge. A successful branch run does not imply that the change is already on main.
+
 ## Required checks
 
 - Builds with warnings enabled on the supported CI matrix.
