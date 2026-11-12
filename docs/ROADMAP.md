@@ -10,7 +10,9 @@ A checked box means implemented and tested, not merely planned.
 - [x] Windows, Linux, and macOS CI workflow file.
 - [x] CodeRabbit configuration.
 - [x] Verify remote GitHub Actions registration and first run ([run #1](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40051409293) passed Configure, Build, and Test on Ubuntu, Windows, and macOS on 2026-10-24).
-- [x] Verify clang-format and clang-tidy static-analysis checks in CI ([run #9](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611434064) passed formatting, analyzed build, and CTest on 2026-10-28 on branch `qa/quality-gates-release-2026-10-28`). Main remains unchanged pending review.
+- [x] Verify clang-format and clang-tidy static-analysis checks in CI ([push run #11](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611805338) and [pull-request run #12](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611811399) passed formatting, analyzed build, and CTest on 2026-10-28 for commit `775d03da87d709b397bb1bab7582f594f54a628f`). Earlier runs #9 and #10 passed on commit `b0c3544d8a6c3dee4ce2a394a12bedd08b76c7fd`. The formatting/static-analysis job remains on draft PR #8 and is not yet part of main.
+- [x] Protect `main` with required, up-to-date Ubuntu, Windows, and macOS C++20 checks. Administrator enforcement is enabled and force pushes/deletion are disabled (verified 2026-11-12).
+- [ ] Promote the formatting/static-analysis job to main and require it after PR #8 is reviewed and merged.
 - [ ] Add small sample projects for lifecycle, scene serialization, and later renderer bring-up.
 - [ ] Publish dependency notices and a version/update policy.
 - [ ] Evaluate sanitizers for supported compilers.

@@ -7,7 +7,16 @@ A feature is complete only when code, tests, docs, and supported-platform statem
 - The cross-platform matrix configures, builds, and runs CTest on Windows, Linux, and macOS.
 - The Ubuntu quality job checks tracked C++ source and header formatting with `clang-format --dry-run --Werror`.
 - The same job builds with `clang-tidy` analyzer checks enabled and treats analyzer diagnostics as errors, then runs CTest against that analyzed build.
-- Verified on 2026-10-28: GitHub Actions run #9 passed formatting, the clang-tidy analyzed build, and CTest on branch `qa/quality-gates-release-2026-10-28`. Main remains unchanged until review and merge. A successful branch run does not imply that the change is already on main.
+- Verified on 2026-10-28: push run [#11](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611805338) and pull-request run [#12](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611811399) passed formatting, the clang-tidy analyzed build, and CTest on commit `775d03da87d709b397bb1bab7582f594f54a628f`. Earlier runs #9 and #10 passed on commit `b0c3544d8a6c3dee4ce2a394a12bedd08b76c7fd`. The quality-gate workflow remains on draft PR #8 and has not been merged into main.
+
+## Main branch protection (verified 2026-11-12)
+
+- Main branch protection is enabled and enforced for everyone, including administrators.
+- Required status checks are `ubuntu-latest / C++20`, `windows-latest / C++20`, and `macos-latest / C++20`.
+- Required checks must be up to date with the base branch.
+- Force pushes and branch deletion are disabled.
+- No required pull-request review count is configured.
+- The formatting/static-analysis job is verified on draft PR #8 but is not yet part of main and is not a required main check.
 
 ## Required checks
 

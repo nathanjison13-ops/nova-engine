@@ -22,7 +22,8 @@ Implemented:
 - Minimal editor executable.
 - Dependency-free tests for engine lifecycle and logger behavior.
 - CMake build and cross-platform build/test CI workflow.
-- Ubuntu quality job for clang-format, clang-tidy analyzer checks, and CTest passed in GitHub Actions run #9 on 2026-10-28 on branch `qa/quality-gates-release-2026-10-28`. Main remains unchanged pending review.
+- Main branch protection requires successful, up-to-date Ubuntu, Windows, and macOS C++20 checks. Enforcement includes administrators; force pushes and branch deletion are disabled. No required review count is configured.
+- Ubuntu formatting/static-analysis job for `clang-format`, `clang-tidy`, and CTest passed push run [#11](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611805338) and pull-request run [#12](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611811399) on commit `775d03da87d709b397bb1bab7582f594f54a628f`. Earlier runs #9 and #10 passed on commit `b0c3544d8a6c3dee4ce2a394a12bedd08b76c7fd`. The formatting/static-analysis job remains on draft PR #8 and is not yet part of main.
 - CodeRabbit configuration.
 - Architecture, platform, quality, and feature roadmap.
 
