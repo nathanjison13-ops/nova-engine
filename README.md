@@ -21,7 +21,10 @@ Implemented:
 - Basic logger with severity filtering and a replaceable callback sink.
 - Minimal editor executable.
 - Dependency-free tests for engine lifecycle and logger behavior.
-- CMake build, cross-platform CI workflow definition, and CodeRabbit configuration.
+- CMake build and cross-platform build/test CI workflow.
+- Main branch protection requires successful, up-to-date Ubuntu, Windows, and macOS C++20 checks. Enforcement includes administrators; force pushes and branch deletion are disabled. No required review count is configured.
+- Ubuntu formatting/static-analysis job for `clang-format`, `clang-tidy`, and CTest passed push run [#11](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611805338) and pull-request run [#12](https://github.com/nathanjison13-ops/nova-engine/actions/runs/40611811399) on commit `775d03da87d709b397bb1bab7582f594f54a628f`. Earlier runs #9 and #10 passed on commit `b0c3544d8a6c3dee4ce2a394a12bedd08b76c7fd`. The formatting/static-analysis job remains on draft PR #8 and is not yet part of main.
+- CodeRabbit configuration.
 - Architecture, platform, quality, and feature roadmap.
 
 Planned, not yet implemented:
@@ -32,7 +35,7 @@ Planned, not yet implemented:
 - Physics, navigation, audio, VFX, scripting, visual scripting, networking, debugging, profiling, and packaging.
 - Android and ARM64 support, including Raspberry Pi-class Linux devices, after the desktop base is validated.
 
-See docs/ROADMAP.md, docs/MODULE_CATALOG.md, and docs/PLATFORM_SUPPORT.md.
+See docs/ROADMAP.md, docs/MODULE_CATALOG.md, docs/PLATFORM_SUPPORT.md, and docs/QUALITY_GATES.md.
 
 ## Build
 
